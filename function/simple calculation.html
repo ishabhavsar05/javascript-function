@@ -1,0 +1,83 @@
+<!-- Task 1: Simple Calculator
+ 
+    Description: Create a function-based simple calculator that performs addition, subtraction,
+    multiplication, and division.
+
+Requirements:
+ -  Use a function for each operation.
+ -  Use condition statements to choose the operation based on user input. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //  addition
+        function add(a, b) 
+        {
+            return a + b;
+        }
+
+        //  subtraction
+        function subtract(a, b) 
+        {
+            return a - b;
+        }
+
+        //  multiplication
+        function multiply(a, b) 
+        {
+            return a * b;
+        }
+
+        // division
+        function divide(a, b) 
+        {
+            
+            return a / b;
+        }
+
+        
+        function calculator(operation, a, b) 
+        {
+            switch (operation) 
+            {
+                case 'add':
+                    return add(a, b);
+                break;
+
+                case 'subtract':
+                    return subtract(a, b);
+                break;
+
+                case 'multiply':
+                    return multiply(a, b);
+                break;
+
+                case 'divide':
+                    return divide(a, b);
+                break;
+
+                default:
+                    throw new Error("Invalid operation.");
+            }
+        }
+
+
+        console.log(calculator('add', 5, 3));
+        console.log(calculator('subtract', 5, 3));
+        console.log(calculator('multiply', 5, 3));
+        console.log(calculator('divide', 6, 3));     
+    </script>
+
+</body>
+
+</html>
